@@ -4,56 +4,61 @@
 <html>
 <head>
     <title>Mohamed's Website</title>
+
+    <style>
+        body {
+            background-color: lightblue;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 100px;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: darkblue;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
 </head>
 
 <body>
+
     <h1>Hello Mohamed 👋</h1>
+
     <p>Welcome to my first website!</p>
 
     <h2>About Me</h2>
+
     <p>My name is Mohamed. I am learning programming.</p>
 
     <button>Click Me</button>
-<a href="https://www.google.com">Visit Google</a>
+
+    <a href="https://www.google.com">Visit Google</a>
+
     <button onclick="showMessage()">About Me</button>
 
-<p id="message"></p>
+    <p id="message"></p>
 
-<script>
-function showMessage() {
-    document.getElementById("message").innerText =
-    "Hello! My name is Mohamed. Welcome to my website!";
-    <style>
-body {
-    background-color: lightblue;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding-top: 100px;
-}
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerText =
+            "Hello! My name is Mohamed. Welcome to my website!";
+        }
+    </script>
 
-button {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    margin: 10px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: darkblue;
-}
-
-p {
-    font-size: 18px;
-    color: #333;
-}
-</style>
-}
-</script>
 </body>
-
-    
 </html>
