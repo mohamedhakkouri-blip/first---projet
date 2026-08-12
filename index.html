@@ -8,19 +8,38 @@
             background-color: lightblue;
             text-align: center;
             font-family: Arial, sans-serif;
-            padding-top: 100px;
+            padding-top: 50px;
             color: black;
+        }
+
+        nav {
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        nav a:hover {
+            color: blue;
         }
 
         .card {
             background-color: white;
             width: 80%;
             max-width: 500px;
-            margin: auto;
+            margin: 20px auto;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
             transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
         }
 
         .profile {
@@ -30,9 +49,7 @@
             object-fit: cover;
             margin-bottom: 15px;
         }
-.card:hover {
-    transform: translateY(-5px);
-}
+
         button {
             background-color: #4da6ff;
             color: black;
@@ -53,59 +70,83 @@
             color: black;
         }
 
-        a {
-            color: black;
-            margin: 10px;
+        .skills {
+            margin-top: 20px;
         }
-        nav {
-    margin-bottom: 30px;
-}
 
-nav a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-    margin: 15px;
-}
+        .skills p {
+            font-weight: bold;
+        }
 
-nav a:hover {
-    color: blue;
-}
+        .skill-box {
+            background-color: #f2f2f2;
+            padding: 15px;
+            margin: 10px auto;
+            border-radius: 12px;
+            width: 80%;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-box:hover {
+            transform: scale(1.05);
+        }
+
+        .message {
+            font-weight: bold;
+            color: blue;
+        }
     </style>
 </head>
 
 <body>
-    <nav>
-    <a href="#">Home</a>
-    <a href="#about">About Me</a>
-    <a href="#goals">My Goals</a>
-    </nav>
-<div class="card">
-    <h2>About Me 👨‍💻</h2>
-    <img src="https://via.placeholder.com/150" alt="My Photo">
-    <p>
-        My name is Mohamed. I am learning programming
-        and building my first website.
-    </p>
 
-    <h3 id="goals">My Goals 🎯</h3>
-    <p>
-        I want to improve my skills and become a good developer.
-    </p>
-</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#goals">My Goals</a>
+        <a href="#skills">My Skills</a>
+    </nav>
+
     <div class="card">
 
         <img class="profile" src="https://i.pravatar.cc/150?img=12" alt="Mohamed">
 
         <h1>Hello Mohamed 👋</h1>
-<h3>Beginner Web Developer 💻</h3>
-    
+
+        <h3>Beginner Web Developer 💻</h3>
 
         <p>Welcome to my first website!</p>
 
         <h2 id="about">About Me 👨‍💻</h2>
 
-        <p>My name is Mohamed. I am learning programming.</p>
+        <p>
+            My name is Mohamed. I am learning programming
+            and building my first website.
+        </p>
+
+        <h3 id="goals">My Goals 🎯</h3>
+
+        <p>
+            I want to improve my skills and become a good developer.
+        </p>
+
+        <div class="skills" id="skills">
+
+            <h3>My Skills 💻</h3>
+
+            <div class="skill-box">
+                <p>🌐 HTML</p>
+            </div>
+
+            <div class="skill-box">
+                <p>🎨 CSS</p>
+            </div>
+
+            <div class="skill-box">
+                <p>⚡ JavaScript</p>
+            </div>
+
+        </div>
 
         <button onclick="clickMe()">Click Me</button>
 
@@ -113,24 +154,23 @@ nav a:hover {
 
         <button onclick="showMessage()">About Me</button>
 
-        <p id="message"></p>
+        <p id="message" class="message"></p>
 
     </div>
 
     <script>
-        function clickMe() {
-    document.getElementById("message").innerText =
-    "Hello Mohamed! 👋 You clicked the button!";
-}
-    
 
-    function showMessage() {
-        document.getElementById("message").innerText =
-        "Hello! My name is Mohamed. Welcome to my website!";
-    }
-</script>
+        function clickMe() {
+            document.getElementById("message").innerText =
+            "Hello Mohamed! 👋 You clicked the button!";
         }
-    
+
+        function showMessage() {
+            document.getElementById("message").innerText =
+            "Hello! My name is Mohamed. Welcome to my website!";
+        }
+
+    </script>
 
 </body>
 </html>
