@@ -1,4 +1,4 @@
-          <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Mohamed's Website</title>
@@ -8,22 +8,18 @@
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             background-color: lightblue;
             text-align: center;
             font-family: Arial, sans-serif;
-            padding-top: 30px;
-            margin: 0;
+            padding-top: 50px;
             color: black;
             transition: 0.4s;
+            margin: 0;
         }
 
         nav {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             animation: fadeDown 1s ease;
         }
 
@@ -31,9 +27,9 @@
             text-decoration: none;
             color: black;
             font-weight: bold;
-            margin: 8px;
+            margin: 15px;
             display: inline-block;
-            transition: 0.3s;
+            transition: transform 0.3s ease;
         }
 
         nav a:hover {
@@ -43,13 +39,13 @@
 
         .card {
             background-color: white;
-            width: 90%;
-            max-width: 550px;
+            width: 80%;
+            max-width: 500px;
             margin: 20px auto;
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: 0.3s;
+            transition: transform 0.3s ease;
             animation: fadeUp 1s ease;
         }
 
@@ -63,20 +59,7 @@
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 15px;
-            animation: profileAnimation 1.5s ease;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            margin-top: 30px;
-        }
-
-        p {
-            font-size: 17px;
-            line-height: 1.6;
+            animation: profileAnimation 2s ease;
         }
 
         button {
@@ -84,11 +67,11 @@
             color: black;
             border: none;
             padding: 12px 20px;
-            margin: 10px 5px;
+            margin: 10px;
             border-radius: 8px;
             cursor: pointer;
             font-size: 16px;
-            transition: 0.3s;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         button:hover {
@@ -96,13 +79,17 @@
             transform: scale(1.05);
         }
 
-        .dark-button {
-            background-color: #222;
-            color: white;
+        p {
+            font-size: 18px;
+            color: black;
         }
 
         .skills {
-            margin-top: 30px;
+            margin-top: 20px;
+        }
+
+        .skills p {
+            font-weight: bold;
         }
 
         .skill-box {
@@ -110,16 +97,13 @@
             padding: 15px;
             margin: 15px auto;
             border-radius: 12px;
-            width: 90%;
-            transition: 0.3s;
+            width: 80%;
+            transition: transform 0.3s ease;
+            animation: fadeUp 1.2s ease;
         }
 
         .skill-box:hover {
-            transform: scale(1.03);
-        }
-
-        .skill-box p {
-            font-weight: bold;
+            transform: scale(1.05);
         }
 
         .progress-container {
@@ -151,9 +135,16 @@
             animation: progressJS 2s ease;
         }
 
+        .message {
+            font-weight: bold;
+            color: blue;
+            animation: fadeUp 0.5s ease;
+        }
+
+        /* Contact */
+
         .contact {
             margin-top: 30px;
-            padding-top: 10px;
         }
 
         .contact a {
@@ -162,7 +153,7 @@
             color: #333;
             font-weight: bold;
             margin: 12px;
-            transition: 0.3s;
+            transition: transform 0.3s ease;
         }
 
         .contact a:hover {
@@ -170,25 +161,17 @@
             transform: scale(1.05);
         }
 
-        .message {
-            font-weight: bold;
-            color: blue;
-            min-height: 25px;
-        }
-
         footer {
-            width: 90%;
-            max-width: 550px;
-            margin: 30px auto;
+            margin-top: 40px;
             padding: 20px;
             background-color: white;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            font-size: 16px;
+            animation: fadeUp 1.5s ease;
         }
 
         footer p {
             margin: 5px;
-            font-size: 14px;
         }
 
         /* Dark Mode */
@@ -198,7 +181,10 @@
             color: white;
         }
 
-        .dark-mode .card,
+        .dark-mode .card {
+            background-color: #1e1e1e;
+        }
+
         .dark-mode footer {
             background-color: #1e1e1e;
         }
@@ -215,12 +201,21 @@
             background-color: #2a2a2a;
         }
 
+        .dark-mode .message {
+            color: #4da6ff;
+        }
+
+        .dark-mode button {
+            color: white;
+        }
+
         .dark-mode .contact a {
             color: white;
         }
 
-        .dark-mode .message {
-            color: #4da6ff;
+        .dark-button {
+            background-color: #222;
+            color: white;
         }
 
         /* Animations */
@@ -250,14 +245,14 @@
         }
 
         @keyframes profileAnimation {
-            from {
-                opacity: 0;
+            0% {
                 transform: scale(0.5);
+                opacity: 0;
             }
 
-            to {
-                opacity: 1;
+            100% {
                 transform: scale(1);
+                opacity: 1;
             }
         }
 
@@ -291,21 +286,25 @@
             }
         }
 
-        /* Responsive */
+        /* Responsive Design */
 
         @media (max-width: 600px) {
 
             body {
-                padding-top: 20px;
+                padding-top: 25px;
+            }
+
+            nav {
+                margin-bottom: 20px;
             }
 
             nav a {
-                font-size: 14px;
                 margin: 5px;
+                font-size: 14px;
             }
 
             .card {
-                width: 94%;
+                width: 92%;
                 padding: 20px;
             }
 
@@ -315,11 +314,11 @@
             }
 
             h1 {
-                font-size: 27px;
+                font-size: 28px;
             }
 
             h2 {
-                font-size: 22px;
+                font-size: 23px;
             }
 
             h3 {
@@ -340,7 +339,8 @@
             }
 
             footer {
-                width: 94%;
+                margin-top: 25px;
+                padding: 15px;
             }
         }
     </style>
@@ -362,19 +362,13 @@
 
     <div class="card">
 
-        <img
-            class="profile"
-            src="https://i.pravatar.cc/150?img=12"
-            alt="Mohamed"
-        >
+        <img class="profile" src="https://i.pravatar.cc/150?img=12" alt="Mohamed">
 
         <h1>Hello Mohamed 👋</h1>
 
         <h3>Beginner Web Developer 💻</h3>
 
-        <p>
-            Welcome to my first website!
-        </p>
+        <p>Welcome to my first website!</p>
 
         <h2 id="about">About Me 👨‍💻</h2>
 
@@ -386,8 +380,7 @@
         <h3 id="goals">My Goals 🎯</h3>
 
         <p>
-            I want to improve my skills and become
-            a good developer.
+            I want to improve my skills and become a good developer.
         </p>
 
         <div class="skills" id="skills">
@@ -424,43 +417,30 @@
 
             <h3>Contact Me 📞</h3>
 
-            <a href="mailto:Mohamedhakkouri@gmail.com">
-                📧 Mohamedhakkouri@gmail.com
+            <a href="mailto:your@email.com">
+                📧 Email Me
             </a>
 
-            <a
-                href="https://www.instagram.com/Theshadowlore/"
-                target="_blank"
-            >
-                📷 Instagram - @Theshadowlore
+            <a href="https://www.instagram.com/" target="_blank">
+                📷 Instagram
             </a>
 
         </div>
 
-        <button onclick="clickMe()">
-            Click Me
-        </button>
+        <button onclick="clickMe()">Click Me</button>
 
-        <a href="https://www.google.com">
-            Visit Google
-        </a>
+        <a href="https://www.google.com">Visit Google</a>
 
-        <button onclick="showMessage()">
-            About Me
-        </button>
+        <button onclick="showMessage()">About Me</button>
 
         <p id="message" class="message"></p>
 
     </div>
 
     <footer>
-
         <p>© 2026 Mohamed</p>
-
         <p>Beginner Web Developer 💻</p>
-
         <p>Made with ❤️ and code</p>
-
     </footer>
 
     <script>
@@ -482,5 +462,4 @@
     </script>
 
 </body>
-</html>  
-    
+</html>
