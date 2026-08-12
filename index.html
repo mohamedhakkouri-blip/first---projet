@@ -4,6 +4,10 @@
     <title>Mohamed's Website</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: lightblue;
             text-align: center;
@@ -11,6 +15,7 @@
             padding-top: 50px;
             color: black;
             transition: 0.4s;
+            margin: 0;
         }
 
         nav {
@@ -22,6 +27,7 @@
             color: black;
             font-weight: bold;
             margin: 15px;
+            display: inline-block;
         }
 
         nav a:hover {
@@ -173,6 +179,64 @@
         .dark-button {
             background-color: #222;
             color: white;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 600px) {
+
+            body {
+                padding-top: 25px;
+            }
+
+            nav {
+                margin-bottom: 20px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            .card {
+                width: 92%;
+                padding: 20px;
+            }
+
+            .profile {
+                width: 100px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 23px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            button {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            .skill-box {
+                width: 95%;
+            }
+
+            footer {
+                margin-top: 25px;
+                padding: 15px;
+            }
         }
     </style>
 </head>
