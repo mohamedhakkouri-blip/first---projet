@@ -57,10 +57,29 @@
             color: black;
             margin: 10px;
         }
+        nav {
+    margin-bottom: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin: 15px;
+}
+
+nav a:hover {
+    color: blue;
+}
     </style>
 </head>
 
 <body>
+    <nav>
+    <a href="#">Home</a>
+    <a href="#about">About Me</a>
+    <a href="#goals">My Goals</a>
+    </nav>
 <div class="card">
     <h2>About Me 👨‍💻</h2>
     <img src="https://via.placeholder.com/150" alt="My Photo">
@@ -69,7 +88,7 @@
         and building my first website.
     </p>
 
-    <h3>My Goals 🎯</h3>
+    <h3 id="goals">My Goals 🎯</h3>
     <p>
         I want to improve my skills and become a good developer.
     </p>
@@ -84,7 +103,7 @@
 
         <p>Welcome to my first website!</p>
 
-        <h2>About Me</h2>
+        <h2 id="about">About Me 👨‍💻</h2>
 
         <p>My name is Mohamed. I am learning programming.</p>
 
