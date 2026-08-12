@@ -141,6 +141,26 @@
             animation: fadeUp 0.5s ease;
         }
 
+        /* Contact */
+
+        .contact {
+            margin-top: 30px;
+        }
+
+        .contact a {
+            display: block;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .contact a:hover {
+            color: blue;
+            transform: scale(1.05);
+        }
+
         footer {
             margin-top: 40px;
             padding: 20px;
@@ -186,6 +206,10 @@
         }
 
         .dark-mode button {
+            color: white;
+        }
+
+        .dark-mode .contact a {
             color: white;
         }
 
@@ -329,6 +353,7 @@
         <a href="#about">About Me</a>
         <a href="#goals">My Goals</a>
         <a href="#skills">My Skills</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <button class="dark-button" onclick="toggleDarkMode()">
@@ -385,6 +410,20 @@
                     <div class="progress-js"></div>
                 </div>
             </div>
+
+        </div>
+
+        <div class="contact" id="contact">
+
+            <h3>Contact Me 📞</h3>
+
+            <a href="mailto:your@email.com">
+                📧 Email Me
+            </a>
+
+            <a href="https://www.instagram.com/" target="_blank">
+                📷 Instagram
+            </a>
 
         </div>
 
