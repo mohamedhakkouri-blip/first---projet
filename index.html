@@ -8,6 +8,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: lightblue;
             text-align: center;
@@ -17,6 +21,8 @@
             transition: 0.4s;
             margin: 0;
         }
+
+        /* Navigation */
 
         nav {
             margin-bottom: 30px;
@@ -37,10 +43,12 @@
             transform: translateY(-3px);
         }
 
+        /* Main Card */
+
         .card {
             background-color: white;
             width: 80%;
-            max-width: 500px;
+            max-width: 600px;
             margin: 20px auto;
             padding: 30px;
             border-radius: 20px;
@@ -53,6 +61,8 @@
             transform: translateY(-5px);
         }
 
+        /* Profile */
+
         .profile {
             width: 120px;
             height: 120px;
@@ -61,6 +71,8 @@
             margin-bottom: 15px;
             animation: profileAnimation 2s ease;
         }
+
+        /* Buttons */
 
         button {
             background-color: #4da6ff;
@@ -79,10 +91,14 @@
             transform: scale(1.05);
         }
 
+        /* Text */
+
         p {
             font-size: 18px;
             color: black;
         }
+
+        /* Skills */
 
         .skills {
             margin-top: 20px;
@@ -97,7 +113,7 @@
             padding: 15px;
             margin: 15px auto;
             border-radius: 12px;
-            width: 80%;
+            width: 90%;
             transition: transform 0.3s ease;
             animation: fadeUp 1.2s ease;
         }
@@ -135,6 +151,38 @@
             animation: progressJS 2s ease;
         }
 
+        /* Projects */
+
+        .projects {
+            margin-top: 40px;
+        }
+
+        .project-box {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 15px;
+            width: 90%;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+            animation: fadeUp 1.2s ease;
+        }
+
+        .project-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-box h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .project-box p {
+            font-size: 16px;
+        }
+
+        /* Message */
+
         .message {
             font-weight: bold;
             color: blue;
@@ -161,6 +209,8 @@
             transform: scale(1.05);
         }
 
+        /* Footer */
+
         footer {
             margin-top: 40px;
             padding: 20px;
@@ -171,295 +221,4 @@
         }
 
         footer p {
-            margin: 5px;
-        }
-
-        /* Dark Mode */
-
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        .dark-mode .card {
-            background-color: #1e1e1e;
-        }
-
-        .dark-mode footer {
-            background-color: #1e1e1e;
-        }
-
-        .dark-mode p {
-            color: white;
-        }
-
-        .dark-mode nav a {
-            color: white;
-        }
-
-        .dark-mode .skill-box {
-            background-color: #2a2a2a;
-        }
-
-        .dark-mode .message {
-            color: #4da6ff;
-        }
-
-        .dark-mode button {
-            color: white;
-        }
-
-        .dark-mode .contact a {
-            color: white;
-        }
-
-        .dark-button {
-            background-color: #222;
-            color: white;
-        }
-
-        /* Animations */
-
-        @keyframes fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes profileAnimation {
-            0% {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes progressHTML {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 80%;
-            }
-        }
-
-        @keyframes progressCSS {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 65%;
-            }
-        }
-
-        @keyframes progressJS {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 40%;
-            }
-        }
-
-        /* Responsive Design */
-
-        @media (max-width: 600px) {
-
-            body {
-                padding-top: 25px;
-            }
-
-            nav {
-                margin-bottom: 20px;
-            }
-
-            nav a {
-                margin: 5px;
-                font-size: 14px;
-            }
-
-            .card {
-                width: 92%;
-                padding: 20px;
-            }
-
-            .profile {
-                width: 100px;
-                height: 100px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 23px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-
-            button {
-                padding: 10px 15px;
-                font-size: 14px;
-            }
-
-            .skill-box {
-                width: 95%;
-            }
-
-            footer {
-                margin-top: 25px;
-                padding: 15px;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#goals">My Goals</a>
-        <a href="#skills">My Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <button class="dark-button" onclick="toggleDarkMode()">
-        🌙 Dark Mode
-    </button>
-
-    <div class="card">
-
-        <img class="profile" src="https://i.pravatar.cc/150?img=12" alt="Mohamed">
-
-        <h1>Hello Mohamed 👋</h1>
-
-        <h3>Beginner Web Developer 💻</h3>
-
-        <p>Welcome to my first website!</p>
-
-        <h2 id="about">About Me 👨‍💻</h2>
-
-        <p>
-            My name is Mohamed. I am learning programming
-            and building my first website.
-        </p>
-
-        <h3 id="goals">My Goals 🎯</h3>
-
-        <p>
-            I want to improve my skills and become a good developer.
-        </p>
-
-        <div class="skills" id="skills">
-
-            <h3>My Skills 💻</h3>
-
-            <div class="skill-box">
-                <p>🌐 HTML - 80%</p>
-
-                <div class="progress-container">
-                    <div class="progress-html"></div>
-                </div>
-            </div>
-
-            <div class="skill-box">
-                <p>🎨 CSS - 65%</p>
-
-                <div class="progress-container">
-                    <div class="progress-css"></div>
-                </div>
-            </div>
-
-            <div class="skill-box">
-                <p>⚡ JavaScript - 40%</p>
-
-                <div class="progress-container">
-                    <div class="progress-js"></div>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="contact" id="contact">
-
-            <h3>Contact Me 📞</h3>
-
-            <a href="mailto:Mohamedhakkouri@gmail.com">
-                📧 Mohamedhakkouri@gmail.com
-            </a>
-
-            <a href="https://www.instagram.com/talesofphantasma/" target="_blank">
-                📷 Instagram - @talesofphantasma
-            </a>
-
-        </div>
-
-        <button onclick="clickMe()">Click Me</button>
-
-        <a href="https://www.google.com">Visit Google</a>
-
-        <button onclick="showMessage()">About Me</button>
-
-        <p id="message" class="message"></p>
-
-    </div>
-
-    <footer>
-        <p>© 2026 Mohamed</p>
-        <p>Beginner Web Developer 💻</p>
-        <p>Made with ❤️ and code</p>
-    </footer>
-
-    <script>
-
-        function clickMe() {
-            document.getElementById("message").innerText =
-            "Hello Mohamed! 👋 You clicked the button!";
-        }
-
-        function showMessage() {
-            document.getElementById("message").innerText =
-            "Hello! My name is Mohamed. Welcome to my website!";
-        }
-
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
-
-    </script>
-
-</body>
-</html>
+            margin: 5
