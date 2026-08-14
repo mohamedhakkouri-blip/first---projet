@@ -8,10 +8,11 @@
     <meta name="google-site-verification"
         content="8Pg-CQD8H1pOzjOU02FPUafpVaAKckOBJWFVJLspkwI">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="غريب الروح - قصص رعب وغموض وتشويق وحكايات مخيفة">
+        content="غريب الروح - قصص رعب وغموض وتشويق">
 
     <title>غريب الروح 👻 | قصص رعب وغموض</title>
 
@@ -31,34 +32,32 @@
             background: #080808;
             color: white;
             font-family: Arial, sans-serif;
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
-        /* NAVIGATION */
+        /* NAVBAR */
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.96);
+            background: rgba(8, 8, 8, 0.97);
+            border-bottom: 1px solid #292929;
             padding: 18px 10px;
             text-align: center;
-            border-bottom: 1px solid #292929;
-            backdrop-filter: blur(10px);
         }
 
-        nav .logo {
-            font-size: 26px;
-            font-weight: bold;
+        .logo {
             color: #ff3333;
-            display: block;
+            font-size: 27px;
+            font-weight: bold;
             margin-bottom: 12px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 7px 12px;
+            margin: 6px 12px;
             font-weight: bold;
             display: inline-block;
             transition: 0.3s;
@@ -66,13 +65,13 @@
 
         nav a:hover {
             color: #ff3333;
-            transform: translateY(-3px);
+            transform: translateY(-2px);
         }
 
         /* HERO */
 
         .hero {
-            min-height: 75vh;
+            min-height: 72vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -82,7 +81,7 @@
             background:
                 radial-gradient(
                     circle at center,
-                    #351010 0%,
+                    #3a1010 0%,
                     #080808 60%
                 );
         }
@@ -96,12 +95,11 @@
             font-size: 58px;
             color: #ff3333;
             margin-bottom: 15px;
-            text-shadow:
-                0 0 20px rgba(255, 0, 0, 0.4);
+            text-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
         }
 
         .hero h2 {
-            font-size: 26px;
+            font-size: 25px;
             margin-bottom: 20px;
         }
 
@@ -112,34 +110,35 @@
         }
 
         .main-button {
-            display: inline-block;
+            border: none;
             background: #d41414;
             color: white;
-            text-decoration: none;
-            padding: 14px 28px;
+            padding: 14px 26px;
             border-radius: 10px;
+            font-size: 16px;
             font-weight: bold;
+            cursor: pointer;
             transition: 0.3s;
         }
 
         .main-button:hover {
             background: #ff2020;
-            transform: scale(1.06);
+            transform: scale(1.05);
         }
 
-        /* SECTIONS */
+        /* GENERAL */
 
         section {
-            padding: 70px 20px;
             max-width: 1100px;
             margin: auto;
+            padding: 70px 20px;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 40px;
             color: #ff3333;
+            text-align: center;
+            font-size: 33px;
+            margin-bottom: 40px;
         }
 
         /* STORIES */
@@ -148,6 +147,7 @@
             display: grid;
             grid-template-columns:
                 repeat(auto-fit, minmax(260px, 1fr));
+
             gap: 25px;
         }
 
@@ -157,20 +157,17 @@
             border-radius: 18px;
             padding: 25px;
             transition: 0.3s;
-            animation: fadeUp 1s ease;
         }
 
         .story-card:hover {
-            transform: translateY(-8px);
+            transform: translateY(-7px);
             border-color: #ff3333;
-
             box-shadow:
-                0 10px 30px
-                rgba(255, 0, 0, 0.15);
+                0 10px 30px rgba(255, 0, 0, 0.15);
         }
 
         .story-icon {
-            font-size: 48px;
+            font-size: 45px;
             margin-bottom: 10px;
         }
 
@@ -185,32 +182,98 @@
         }
 
         .read-button {
-            display: inline-block;
-            background: #222;
+            border: none;
+            background: #252525;
             color: #ff4444;
-            text-decoration: none;
-            padding: 9px 17px;
+            padding: 10px 17px;
             border-radius: 8px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
             transition: 0.3s;
         }
 
         .read-button:hover {
             background: #ff3333;
             color: white;
-            transform: scale(1.05);
+        }
+
+        /* STORY PAGE */
+
+        #story-page {
+            display: none;
+        }
+
+        .story-content {
+            max-width: 850px;
+            margin: auto;
+            background: #111;
+            border: 1px solid #292929;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow:
+                0 10px 40px rgba(0, 0, 0, 0.5);
+
+            animation: fadeUp 0.6s ease;
+        }
+
+        .story-content h1 {
+            text-align: center;
+            color: #ff3333;
+            font-size: 40px;
+            margin-bottom: 8px;
+        }
+
+        .story-info {
+            text-align: center;
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        .story-content p {
+            color: #ddd;
+            font-size: 19px;
+            margin-bottom: 22px;
+        }
+
+        .quote {
+            background: #191919;
+            border-right: 4px solid #ff3333;
+            padding: 15px 20px;
+            margin: 25px 0;
+            color: #ff6666;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .back-button {
+            border: none;
+            background: #d41414;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 9px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff2020;
+            transform: scale(1.04);
         }
 
         /* ABOUT */
 
-        .about {
+        .about-box {
             background: #101010;
             border-radius: 20px;
+            padding: 40px 25px;
             text-align: center;
-            padding: 45px 25px;
-            border: 1px solid #222;
         }
 
-        .about p {
+        .about-box p {
             color: #bbb;
             max-width: 750px;
             margin: auto;
@@ -233,12 +296,11 @@
             text-decoration: none;
             margin: 10px;
             display: inline-block;
-            transition: 0.3s;
+            font-weight: bold;
         }
 
         .contact a:hover {
             color: white;
-            transform: scale(1.05);
         }
 
         /* FOOTER */
@@ -301,7 +363,19 @@
             }
 
             .section-title {
-                font-size: 28px;
+                font-size: 27px;
+            }
+
+            .story-content {
+                padding: 25px 18px;
+            }
+
+            .story-content h1 {
+                font-size: 30px;
+            }
+
+            .story-content p {
+                font-size: 17px;
             }
 
         }
@@ -341,224 +415,513 @@
     </nav>
 
 
-    <!-- HERO -->
+    <!-- HOME -->
 
-    <header class="hero" id="home">
+    <div id="home-page">
 
-        <div class="hero-content">
+
+        <!-- HERO -->
+
+        <header class="hero" id="home">
+
+            <div class="hero-content">
+
+                <h1>
+                    👻 غريب الروح
+                </h1>
+
+                <h2>
+                    حيث تبدأ الحكاية... وينتهي الأمان.
+                </h2>
+
+                <p>
+                    مرحباً بك في عالم من القصص الغريبة،
+                    الأحداث المرعبة والأسرار التي لا تجد لها تفسيراً.
+                </p>
+
+                <button
+                    class="main-button"
+                    onclick="goToStories()">
+
+                    📖 اكتشف القصص
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- STORIES -->
+
+        <section id="stories">
+
+            <h2 class="section-title">
+                📚 أحدث القصص
+            </h2>
+
+
+            <div class="stories">
+
+
+                <!-- STORY 1 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        👁️
+                    </div>
+
+                    <h3>
+                        الطابق الرابع
+                    </h3>
+
+                    <p>
+                        في عمارة قديمة لا تتجاوز ثلاثة طوابق،
+                        بدأ سامر يسمع المصعد يصعد كل ليلة
+                        إلى طابق غير موجود...
+                    </p>
+
+                    <button
+                        class="read-button"
+                        onclick="openStory()">
+
+                        📖 اقرأ القصة →
+
+                    </button>
+
+                </div>
+
+
+                <!-- STORY 2 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        🌑
+                    </div>
+
+                    <h3>
+                        الشخص الذي لا ينام
+                    </h3>
+
+                    <p>
+                        كل ليلة كان يسمع نفس الصوت
+                        خلف باب غرفته...
+                    </p>
+
+                    <button class="read-button">
+
+                        🔒 قريباً
+
+                    </button>
+
+                </div>
+
+
+                <!-- STORY 3 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        🏚️
+                    </div>
+
+                    <h3>
+                        المنزل المهجور
+                    </h3>
+
+                    <p>
+                        منزل قديم في نهاية القرية،
+                        الجميع يخاف الاقتراب منه.
+                    </p>
+
+                    <button class="read-button">
+
+                        🔒 قريباً
+
+                    </button>
+
+                </div>
+
+
+                <!-- STORY 4 -->
+
+                <div class="story-card">
+
+                    <div class="story-icon">
+                        📞
+                    </div>
+
+                    <h3>
+                        المكالمة الأخيرة
+                    </h3>
+
+                    <p>
+                        تلقى مكالمة من رقم مجهول...
+                        لكن المتصل كان ميتاً.
+                    </p>
+
+                    <button class="read-button">
+
+                        🔒 قريباً
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about">
+
+            <div class="about-box">
+
+                <h2 class="section-title">
+                    👤 عن غريب الروح
+                </h2>
+
+                <p>
+                    غريب الروح هو عالم لمحبي القصص الغامضة
+                    والرعب والتشويق.
+                    هنا ستجد حكايات تأخذك إلى أماكن
+                    لن ترغب في زيارتها وحدك.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTACT -->
+
+        <section id="contact">
+
+            <div class="contact">
+
+                <h2 class="section-title">
+                    📩 تواصل معنا
+                </h2>
+
+                <p>
+                    عندك قصة أو فكرة؟ تواصل معنا 👇
+                </p>
+
+                <a href="mailto:Mohamedhakkouri@gmail.com">
+                    📧 البريد الإلكتروني
+                </a>
+
+                <a
+                    href="https://www.instagram.com/talesofphantasma/"
+                    target="_blank">
+
+                    📷 Instagram
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <!-- STORY -->
+
+    <section id="story-page">
+
+        <div class="story-content">
+
+
+            <button
+                class="back-button"
+                onclick="closeStory()">
+
+                ← رجوع للقصص
+
+            </button>
+
 
             <h1>
-                👻 غريب الروح
+                👁️ الطابق الرابع
             </h1>
 
-            <h2>
-                حيث تبدأ الحكاية... وينتهي الأمان.
-            </h2>
 
-            <p>
-                مرحباً بك في عالم من القصص الغريبة،
-                الأحداث المرعبة والأسرار التي لا تجد لها تفسيراً.
-            </p>
-
-            <a href="#stories" class="main-button">
-                📖 اكتشف القصص
-            </a>
-
-        </div>
-
-    </header>
-
-
-    <!-- STORIES -->
-
-    <section id="stories">
-
-        <h2 class="section-title">
-            📚 أحدث القصص
-        </h2>
-
-
-        <div class="stories">
-
-
-            <!-- STORY 1 -->
-
-            <div class="story-card">
-
-                <div class="story-icon">
-                    🌑
-                </div>
-
-                <h3>
-                    المنزل الذي لا ينام
-                </h3>
-
-                <p>
-                    منزل مهجور في نهاية القرية،
-                    وصورة قديمة تخفي وراءها
-                    سراً لم يكن أحد مستعداً لاكتشافه.
-                </p>
-
-                <a
-                    href="story1.html"
-                    class="read-button">
-
-                    اقرأ القصة →
-
-                </a>
-
+            <div class="story-info">
+                👻 غريب الروح — قصة رعب وغموض
             </div>
 
 
-            <!-- STORY 2 -->
-
-            <div class="story-card">
-
-                <div class="story-icon">
-                    👁️
-                </div>
-
-                <h3>
-                    الشخص الذي لا ينام
-                </h3>
-
-                <p>
-                    كل ليلة كان يسمع نفس الصوت
-                    قادماً من خلف الباب...
-                    لكن لم يكن هناك أحد.
-                </p>
-
-                <a
-                    href="#"
-                    class="read-button">
-
-                    قريباً...
-
-                </a>
-
-            </div>
-
-
-            <!-- STORY 3 -->
-
-            <div class="story-card">
-
-                <div class="story-icon">
-                    🏚️
-                </div>
-
-                <h3>
-                    المنزل المهجور
-                </h3>
-
-                <p>
-                    منزل قديم في نهاية القرية،
-                    والجميع يحذر من الاقتراب منه
-                    بعد غروب الشمس.
-                </p>
-
-                <a
-                    href="#"
-                    class="read-button">
-
-                    قريباً...
-
-                </a>
-
-            </div>
-
-
-            <!-- STORY 4 -->
-
-            <div class="story-card">
-
-                <div class="story-icon">
-                    📞
-                </div>
-
-                <h3>
-                    المكالمة الأخيرة
-                </h3>
-
-                <p>
-                    تلقى مكالمة من رقم مجهول،
-                    لكن الصدمة كانت عندما عرف
-                    من كان يتصل به.
-                </p>
-
-                <a
-                    href="#"
-                    class="read-button">
-
-                    قريباً...
-
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-        <div class="about">
-
-            <h2 class="section-title">
-                👤 عن غريب الروح
-            </h2>
-
             <p>
-                غريب الروح هو عالم لمحبي القصص الغامضة
-                والرعب والتشويق.
-                هنا ستجد حكايات تأخذك إلى أماكن
-                لن ترغب في زيارتها وحدك.
+                كانت الساعة تقترب من الثالثة صباحاً عندما
+                استيقظ سامر على صوت المصعد.
             </p>
 
-            <br>
-
             <p>
-                كل قصة هنا هي رحلة جديدة...
-                فهل تملك الشجاعة لقراءتها حتى النهاية؟ 👻
+                في البداية لم يهتم كثيراً.
+                كانت العمارة قديمة، والأصوات فيها كثيرة،
+                خصوصاً في الليل.
             </p>
 
-        </div>
-
-    </section>
-
-
-    <!-- CONTACT -->
-
-    <section id="contact">
-
-        <div class="contact">
-
-            <h2 class="section-title">
-                📩 تواصل معنا
-            </h2>
-
             <p>
-                عندك قصة أو فكرة؟ تواصل معنا 👇
+                لكنه هذه المرة سمع صوتاً مختلفاً.
+                صوت المصعد كان يصعد ببطء...
+                طابقاً بعد طابق.
             </p>
 
-            <a
-                href="mailto:Mohamedhakkouri@gmail.com">
+            <p>
+                نظر سامر إلى الساعة.
+            </p>
 
-                📧 البريد الإلكتروني
+            <div class="quote">
+                03:17
+            </div>
 
-            </a>
+            <p>
+                وبعد لحظات، سمع صوت المصعد يتوقف
+                أمام باب شقته.
+            </p>
 
-            <a
-                href="https://www.instagram.com/talesofphantasma/"
-                target="_blank">
+            <p>
+                فتح الباب قليلاً ونظر إلى الممر.
+                لم يكن هناك أحد.
+            </p>
 
-                📷 Instagram
+            <p>
+                اقترب من المصعد.
+                كانت أبوابه مفتوحة.
+            </p>
 
-            </a>
+            <p>
+                دخل سامر ونظر إلى لوحة الأزرار.
+            </p>
+
+            <p>
+                كانت العمارة تتكون من ثلاثة طوابق فقط.
+                الطابق الأرضي، الأول، الثاني والثالث.
+            </p>
+
+            <p>
+                لكنه رأى شيئاً لم يره من قبل.
+            </p>
+
+            <div class="quote">
+                الطابق 4
+            </div>
+
+            <p>
+                بقي سامر ينظر إلى الزر لعدة ثوانٍ.
+                ثم ضغط عليه.
+            </p>
+
+            <p>
+                أغلقت أبواب المصعد.
+                وبدأ بالصعود.
+            </p>
+
+            <p>
+                مر بالطابق الأول...
+                ثم الثاني...
+                ثم الثالث...
+            </p>
+
+            <p>
+                لكنه لم يتوقف.
+            </p>
+
+            <p>
+                استمر المصعد في الصعود رغم أن العمارة
+                لا تحتوي على طابق رابع.
+            </p>
+
+            <p>
+                فجأة انطفأت الأضواء.
+            </p>
+
+            <p>
+                بقي سامر في الظلام يسمع صوت أنفاسه.
+            </p>
+
+            <p>
+                ثم عاد الضوء.
+            </p>
+
+            <p>
+                كانت أبواب المصعد مفتوحة.
+            </p>
+
+            <p>
+                أمامه كان هناك ممر طويل ومظلم.
+                جدرانه قديمة والمصابيح تومض باستمرار.
+            </p>
+
+            <p>
+                وفي نهاية الممر كان هناك باب أسود.
+            </p>
+
+            <p>
+                اقترب سامر منه ببطء.
+            </p>
+
+            <p>
+                وعندما وصل إليه...
+                سمع طرقاً من الجهة الأخرى.
+            </p>
+
+            <div class="quote">
+                طَق... طَق... طَق...
+            </div>
+
+            <p>
+                تراجع سامر خطوة.
+            </p>
+
+            <p>
+                ثم سمع صوتاً خلف الباب:
+            </p>
+
+            <div class="quote">
+                "تأخرت كثيراً يا سامر..."
+            </div>
+
+            <p>
+                تجمد في مكانه.
+            </p>
+
+            <p>
+                كيف عرف هذا الصوت اسمه؟
+            </p>
+
+            <p>
+                حاول العودة إلى المصعد.
+                لكنه عندما التفت...
+                لم يجد المصعد.
+            </p>
+
+            <p>
+                كان الممر خالياً.
+            </p>
+
+            <p>
+                ثم عاد الصوت:
+            </p>
+
+            <div class="quote">
+                "الآن جاء دورك."
+            </div>
+
+            <p>
+                انطفأت المصابيح كلها.
+            </p>
+
+            <p>
+                وبعد ثوانٍ، سمع سامر صوت المصعد
+                يفتح أبوابه خلفه.
+            </p>
+
+            <p>
+                استدار بسرعة.
+            </p>
+
+            <p>
+                كان المصعد موجوداً.
+            </p>
+
+            <p>
+                دخل سامر بسرعة وضغط على زر الطابق الأرضي.
+            </p>
+
+            <p>
+                نزل المصعد بسرعة مخيفة.
+            </p>
+
+            <p>
+                عندما فتح الباب، وجد نفسه أمام شقته.
+            </p>
+
+            <p>
+                دخل وأغلق الباب خلفه.
+            </p>
+
+            <p>
+                نظر إلى الساعة.
+            </p>
+
+            <div class="quote">
+                03:18
+            </div>
+
+            <p>
+                مرت دقيقة واحدة فقط.
+            </p>
+
+            <p>
+                لكنه عندما نظر إلى يده،
+                وجد كتابة سوداء عليها.
+            </p>
+
+            <div class="quote">
+                "سنلتقي غداً... في 03:17."
+            </div>
+
+            <p>
+                ومنذ تلك الليلة لم يعد سامر يستخدم المصعد.
+            </p>
+
+            <p>
+                لكنه كل ليلة، عند الساعة 03:17،
+                كان يسمع المصعد يتوقف أمام باب شقته.
+            </p>
+
+            <p>
+                وفي الليلة السابعة...
+                سمع طرقاً على الباب.
+            </p>
+
+            <div class="quote">
+                طَق... طَق... طَق...
+            </div>
+
+            <p>
+                ثم جاء الصوت:
+            </p>
+
+            <div class="quote">
+                "سامر... افتح الباب."
+            </div>
+
+            <p>
+                لم يفتح سامر الباب.
+            </p>
+
+            <p>
+                لكنه سمع مقبض الباب يتحرك ببطء.
+            </p>
+
+            <p>
+                وفي صباح اليوم التالي...
+                لم يجد الجيران سامر في شقته.
+            </p>
+
+            <p>
+                كانت الشقة مقفلة من الداخل.
+            </p>
+
+            <p>
+                أما المصعد...
+                فما زال يتوقف كل ليلة عند الساعة 03:17.
+            </p>
+
+            <div class="quote">
+                👻 النهاية... أم أن الحكاية لم تبدأ بعد؟
+            </div>
+
 
         </div>
 
@@ -571,22 +934,62 @@
 
         <p>
             © 2026
-            <strong>
-                غريب الروح
-            </strong>
+            <strong>غريب الروح</strong>
         </p>
 
         <p>
             جميع الحقوق محفوظة ❤️
         </p>
 
-        <p>
-            قصص رعب • غموض • تشويق 👻
-        </p>
-
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function openStory() {
+
+            document.getElementById("home-page").style.display = "none";
+
+            document.getElementById("story-page").style.display = "block";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+
+
+        function closeStory() {
+
+            document.getElementById("story-page").style.display = "none";
+
+            document.getElementById("home-page").style.display = "block";
+
+            setTimeout(function() {
+
+                document.getElementById("stories").scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }, 100);
+
+        }
+
+
+        function goToStories() {
+
+            document.getElementById("stories").scrollIntoView({
+                behavior: "smooth"
+            });
+
+        }
+
+    </script>
 
 
 </body>
 
-</html>
+    </html>
