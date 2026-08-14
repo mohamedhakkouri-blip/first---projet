@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 
     <meta charset="UTF-8">
@@ -10,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="غريب الروح - قصص رعب وغموض وتشويق">
+        content="غريب الروح - قصص رعب وغموض وتشويق وحكايات مخيفة">
 
     <title>غريب الروح 👻 | قصص رعب وغموض</title>
 
@@ -33,32 +34,34 @@
             line-height: 1.8;
         }
 
+        /* NAVIGATION */
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(10, 10, 10, 0.95);
+            background: rgba(10, 10, 10, 0.96);
             padding: 18px 10px;
             text-align: center;
-            border-bottom: 1px solid #222;
+            border-bottom: 1px solid #292929;
             backdrop-filter: blur(10px);
         }
 
         nav .logo {
-            font-size: 25px;
+            font-size: 26px;
             font-weight: bold;
             color: #ff3333;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 8px 12px;
+            margin: 7px 12px;
             font-weight: bold;
-            transition: 0.3s;
             display: inline-block;
+            transition: 0.3s;
         }
 
         nav a:hover {
@@ -66,31 +69,39 @@
             transform: translateY(-3px);
         }
 
+        /* HERO */
+
         .hero {
             min-height: 75vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 30px 20px;
+            padding: 40px 20px;
+
             background:
-                radial-gradient(circle at center, #351010 0%, #080808 55%);
+                radial-gradient(
+                    circle at center,
+                    #351010 0%,
+                    #080808 60%
+                );
         }
 
         .hero-content {
-            max-width: 750px;
+            max-width: 800px;
             animation: fadeUp 1s ease;
         }
 
         .hero h1 {
-            font-size: 55px;
+            font-size: 58px;
             color: #ff3333;
             margin-bottom: 15px;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+            text-shadow:
+                0 0 20px rgba(255, 0, 0, 0.4);
         }
 
         .hero h2 {
-            font-size: 25px;
+            font-size: 26px;
             margin-bottom: 20px;
         }
 
@@ -105,7 +116,7 @@
             background: #d41414;
             color: white;
             text-decoration: none;
-            padding: 13px 25px;
+            padding: 14px 28px;
             border-radius: 10px;
             font-weight: bold;
             transition: 0.3s;
@@ -113,8 +124,10 @@
 
         .main-button:hover {
             background: #ff2020;
-            transform: scale(1.05);
+            transform: scale(1.06);
         }
+
+        /* SECTIONS */
 
         section {
             padding: 70px 20px;
@@ -124,14 +137,17 @@
 
         .section-title {
             text-align: center;
-            font-size: 32px;
+            font-size: 34px;
             margin-bottom: 40px;
             color: #ff3333;
         }
 
+        /* STORIES */
+
         .stories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
@@ -147,16 +163,19 @@
         .story-card:hover {
             transform: translateY(-8px);
             border-color: #ff3333;
-            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.15);
+
+            box-shadow:
+                0 10px 30px
+                rgba(255, 0, 0, 0.15);
         }
 
         .story-icon {
-            font-size: 45px;
+            font-size: 48px;
             margin-bottom: 10px;
         }
 
         .story-card h3 {
-            font-size: 22px;
+            font-size: 23px;
             margin-bottom: 10px;
         }
 
@@ -170,7 +189,7 @@
             background: #222;
             color: #ff4444;
             text-decoration: none;
-            padding: 8px 15px;
+            padding: 9px 17px;
             border-radius: 8px;
             transition: 0.3s;
         }
@@ -178,13 +197,17 @@
         .read-button:hover {
             background: #ff3333;
             color: white;
+            transform: scale(1.05);
         }
+
+        /* ABOUT */
 
         .about {
             background: #101010;
             border-radius: 20px;
             text-align: center;
-            padding: 40px 25px;
+            padding: 45px 25px;
+            border: 1px solid #222;
         }
 
         .about p {
@@ -194,8 +217,15 @@
             font-size: 18px;
         }
 
+        /* CONTACT */
+
         .contact {
             text-align: center;
+        }
+
+        .contact p {
+            color: #bbb;
+            margin-bottom: 15px;
         }
 
         .contact a {
@@ -203,21 +233,32 @@
             text-decoration: none;
             margin: 10px;
             display: inline-block;
+            transition: 0.3s;
         }
+
+        .contact a:hover {
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* FOOTER */
 
         footer {
             background: #050505;
             border-top: 1px solid #222;
             text-align: center;
             padding: 30px 15px;
-            color: #888;
+            color: #777;
         }
 
         footer strong {
             color: #ff3333;
         }
 
+        /* ANIMATION */
+
         @keyframes fadeUp {
+
             from {
                 opacity: 0;
                 transform: translateY(30px);
@@ -227,7 +268,10 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+
         }
+
+        /* MOBILE */
 
         @media (max-width: 600px) {
 
@@ -257,19 +301,20 @@
             }
 
             .section-title {
-                font-size: 27px;
+                font-size: 28px;
             }
 
-            .section-title {
-                font-size: 27px;
-            }
         }
 
     </style>
 
 </head>
 
+
 <body>
+
+
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -277,19 +322,34 @@
             👻 غريب الروح
         </div>
 
-        <a href="#home">الرئيسية</a>
-        <a href="#stories">القصص</a>
-        <a href="#about">عن الموقع</a>
-        <a href="#contact">تواصل معنا</a>
+        <a href="#home">
+            الرئيسية
+        </a>
+
+        <a href="#stories">
+            القصص
+        </a>
+
+        <a href="#about">
+            عن الموقع
+        </a>
+
+        <a href="#contact">
+            تواصل معنا
+        </a>
 
     </nav>
 
+
+    <!-- HERO -->
 
     <header class="hero" id="home">
 
         <div class="hero-content">
 
-            <h1>👻 غريب الروح</h1>
+            <h1>
+                👻 غريب الروح
+            </h1>
 
             <h2>
                 حيث تبدأ الحكاية... وينتهي الأمان.
@@ -309,38 +369,48 @@
     </header>
 
 
+    <!-- STORIES -->
+
     <section id="stories">
 
         <h2 class="section-title">
             📚 أحدث القصص
         </h2>
 
+
         <div class="stories">
 
+
+            <!-- STORY 1 -->
 
             <div class="story-card">
 
                 <div class="story-icon">
-                    👁️
+                    🌑
                 </div>
 
                 <h3>
-                    الطابق الرابع
+                    المنزل الذي لا ينام
                 </h3>
 
                 <p>
-                    في عمارة قديمة لا تتجاوز ثلاثة طوابق،
-                    بدأ سامر يسمع المصعد يصعد كل ليلة عند
-                    الساعة 03:17... إلى طابق غير موجود.
-                    لكن ما وجده خلف ذلك الباب كان أبشع مما تخيل.
+                    منزل مهجور في نهاية القرية،
+                    وصورة قديمة تخفي وراءها
+                    سراً لم يكن أحد مستعداً لاكتشافه.
                 </p>
 
-                <a href="#" class="read-button">
-                    📖 اقرأ القصة →
+                <a
+                    href="story1.html"
+                    class="read-button">
+
+                    اقرأ القصة →
+
                 </a>
 
             </div>
 
+
+            <!-- STORY 2 -->
 
             <div class="story-card">
 
@@ -353,4 +423,170 @@
                 </h3>
 
                 <p>
-                    كل ليلة كان يسم
+                    كل ليلة كان يسمع نفس الصوت
+                    قادماً من خلف الباب...
+                    لكن لم يكن هناك أحد.
+                </p>
+
+                <a
+                    href="#"
+                    class="read-button">
+
+                    قريباً...
+
+                </a>
+
+            </div>
+
+
+            <!-- STORY 3 -->
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    🏚️
+                </div>
+
+                <h3>
+                    المنزل المهجور
+                </h3>
+
+                <p>
+                    منزل قديم في نهاية القرية،
+                    والجميع يحذر من الاقتراب منه
+                    بعد غروب الشمس.
+                </p>
+
+                <a
+                    href="#"
+                    class="read-button">
+
+                    قريباً...
+
+                </a>
+
+            </div>
+
+
+            <!-- STORY 4 -->
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    📞
+                </div>
+
+                <h3>
+                    المكالمة الأخيرة
+                </h3>
+
+                <p>
+                    تلقى مكالمة من رقم مجهول،
+                    لكن الصدمة كانت عندما عرف
+                    من كان يتصل به.
+                </p>
+
+                <a
+                    href="#"
+                    class="read-button">
+
+                    قريباً...
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <h2 class="section-title">
+                👤 عن غريب الروح
+            </h2>
+
+            <p>
+                غريب الروح هو عالم لمحبي القصص الغامضة
+                والرعب والتشويق.
+                هنا ستجد حكايات تأخذك إلى أماكن
+                لن ترغب في زيارتها وحدك.
+            </p>
+
+            <br>
+
+            <p>
+                كل قصة هنا هي رحلة جديدة...
+                فهل تملك الشجاعة لقراءتها حتى النهاية؟ 👻
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="contact">
+
+            <h2 class="section-title">
+                📩 تواصل معنا
+            </h2>
+
+            <p>
+                عندك قصة أو فكرة؟ تواصل معنا 👇
+            </p>
+
+            <a
+                href="mailto:Mohamedhakkouri@gmail.com">
+
+                📧 البريد الإلكتروني
+
+            </a>
+
+            <a
+                href="https://www.instagram.com/talesofphantasma/"
+                target="_blank">
+
+                📷 Instagram
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026
+            <strong>
+                غريب الروح
+            </strong>
+        </p>
+
+        <p>
+            جميع الحقوق محفوظة ❤️
+        </p>
+
+        <p>
+            قصص رعب • غموض • تشويق 👻
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
