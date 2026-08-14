@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 
     <meta charset="UTF-8">
@@ -31,14 +30,14 @@
             background: #080808;
             color: white;
             font-family: Arial, sans-serif;
-            line-height: 1.9;
+            line-height: 1.8;
         }
 
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(10,10,10,0.96);
+            background: rgba(10, 10, 10, 0.95);
             padding: 18px 10px;
             text-align: center;
             border-bottom: 1px solid #222;
@@ -46,7 +45,7 @@
         }
 
         nav .logo {
-            font-size: 26px;
+            font-size: 25px;
             font-weight: bold;
             color: #ff3333;
             display: block;
@@ -58,8 +57,8 @@
             text-decoration: none;
             margin: 8px 12px;
             font-weight: bold;
-            display: inline-block;
             transition: 0.3s;
+            display: inline-block;
         }
 
         nav a:hover {
@@ -79,7 +78,7 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 750px;
             animation: fadeUp 1s ease;
         }
 
@@ -87,7 +86,7 @@
             font-size: 55px;
             color: #ff3333;
             margin-bottom: 15px;
-            text-shadow: 0 0 20px rgba(255,0,0,0.4);
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
         }
 
         .hero h2 {
@@ -101,20 +100,15 @@
             margin-bottom: 30px;
         }
 
-        .main-button,
-        .read-button,
-        .back-button {
-            display: inline-block;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 10px;
-            transition: 0.3s;
-        }
-
         .main-button {
+            display: inline-block;
             background: #d41414;
             color: white;
+            text-decoration: none;
             padding: 13px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: 0.3s;
         }
 
         .main-button:hover {
@@ -153,7 +147,7 @@
         .story-card:hover {
             transform: translateY(-8px);
             border-color: #ff3333;
-            box-shadow: 0 10px 30px rgba(255,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.15);
         }
 
         .story-icon {
@@ -172,12 +166,13 @@
         }
 
         .read-button {
+            display: inline-block;
             background: #222;
             color: #ff4444;
-            padding: 9px 16px;
-            cursor: pointer;
-            border: none;
-            font-size: 15px;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
         }
 
         .read-button:hover {
@@ -185,32 +180,177 @@
             color: white;
         }
 
-        /* صفحة القصة */
-
-        #story-page {
-            display: none;
-            min-height: 80vh;
-            padding: 60px 20px;
-        }
-
-        .story-content {
-            max-width: 850px;
-            margin: auto;
-            background: #111;
-            border: 1px solid #292929;
+        .about {
+            background: #101010;
             border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
-            animation: fadeUp 0.7s ease;
+            text-align: center;
+            padding: 40px 25px;
         }
 
-        .story-content h1 {
+        .about p {
+            color: #bbb;
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #ff4444;
+            text-decoration: none;
+            margin: 10px;
+            display: inline-block;
+        }
+
+        footer {
+            background: #050505;
+            border-top: 1px solid #222;
+            text-align: center;
+            padding: 30px 15px;
+            color: #888;
+        }
+
+        footer strong {
             color: #ff3333;
-            text-align: center;
-            font-size: 38px;
-            margin-bottom: 10px;
         }
 
-        .story-meta {
-            text-align: center;
-            color: #777
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .hero {
+                min-height: 65vh;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 50px 15px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            👻 غريب الروح
+        </div>
+
+        <a href="#home">الرئيسية</a>
+        <a href="#stories">القصص</a>
+        <a href="#about">عن الموقع</a>
+        <a href="#contact">تواصل معنا</a>
+
+    </nav>
+
+
+    <header class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>👻 غريب الروح</h1>
+
+            <h2>
+                حيث تبدأ الحكاية... وينتهي الأمان.
+            </h2>
+
+            <p>
+                مرحباً بك في عالم من القصص الغريبة،
+                الأحداث المرعبة والأسرار التي لا تجد لها تفسيراً.
+            </p>
+
+            <a href="#stories" class="main-button">
+                📖 اكتشف القصص
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <section id="stories">
+
+        <h2 class="section-title">
+            📚 أحدث القصص
+        </h2>
+
+        <div class="stories">
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    👁️
+                </div>
+
+                <h3>
+                    الطابق الرابع
+                </h3>
+
+                <p>
+                    في عمارة قديمة لا تتجاوز ثلاثة طوابق،
+                    بدأ سامر يسمع المصعد يصعد كل ليلة عند
+                    الساعة 03:17... إلى طابق غير موجود.
+                    لكن ما وجده خلف ذلك الباب كان أبشع مما تخيل.
+                </p>
+
+                <a href="#" class="read-button">
+                    📖 اقرأ القصة →
+                </a>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    👁️
+                </div>
+
+                <h3>
+                    الشخص الذي لا ينام
+                </h3>
+
+                <p>
+                    كل ليلة كان يسم
