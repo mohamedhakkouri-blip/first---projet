@@ -1,228 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar" dir="rtl">
 <head>
 
-    <meta name="google-site-verification" content="8Pg-CQD8H1pOzjOU02FPUafpVaAKckOBJWFVJLspkwI" />
+    <meta charset="UTF-8">
 
-    <title>Mohamed's Website</title>
+    <meta name="google-site-verification"
+        content="8Pg-CQD8H1pOzjOU02FPUafpVaAKckOBJWFVJLspkwI">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="غريب الروح - قصص رعب وغموض وتشويق">
+
+    <title>غريب الروح 👻 | قصص رعب وغموض</title>
 
     <style>
+
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: lightblue;
-            text-align: center;
+            background: #080808;
+            color: white;
             font-family: Arial, sans-serif;
-            padding-top: 50px;
-            color: black;
+            line-height: 1.8;
             transition: 0.4s;
-            margin: 0;
         }
 
+        /* Navigation */
+
         nav {
-            margin-bottom: 30px;
-            animation: fadeDown 1s ease;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(10, 10, 10, 0.95);
+            padding: 18px 10px;
+            text-align: center;
+            border-bottom: 1px solid #222;
+            backdrop-filter: blur(10px);
+        }
+
+        nav .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #ff3333;
+            display: block;
+            margin-bottom: 10px;
         }
 
         nav a {
+            color: white;
             text-decoration: none;
-            color: black;
+            margin: 8px 12px;
             font-weight: bold;
-            margin: 15px;
+            transition: 0.3s;
             display: inline-block;
-            transition: transform 0.3s ease;
         }
 
         nav a:hover {
-            color: blue;
+            color: #ff3333;
             transform: translateY(-3px);
         }
 
-        .card {
-            background-color: white;
-            width: 80%;
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease;
+        /* Hero */
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+            background:
+                radial-gradient(circle at center, #351010 0%, #080808 55%);
+        }
+
+        .hero-content {
+            max-width: 750px;
             animation: fadeUp 1s ease;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .profile {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
+        .hero h1 {
+            font-size: 55px;
+            color: #ff3333;
             margin-bottom: 15px;
-            animation: profileAnimation 2s ease;
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
         }
 
-        button {
-            background-color: #4da6ff;
-            color: black;
-            border: none;
-            padding: 12px 20px;
-            margin: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+        .hero h2 {
+            font-size: 25px;
+            margin-bottom: 20px;
         }
 
-        button:hover {
-            background-color: #3399ff;
-            transform: scale(1.05);
-        }
-
-        p {
+        .hero p {
+            color: #ccc;
             font-size: 18px;
-            color: black;
+            margin-bottom: 30px;
         }
 
-        .skills {
-            margin-top: 20px;
-        }
-
-        .skills p {
+        .main-button {
+            display: inline-block;
+            background: #d41414;
+            color: white;
+            text-decoration: none;
+            padding: 13px 25px;
+            border-radius: 10px;
             font-weight: bold;
+            transition: 0.3s;
         }
 
-        .skill-box {
-            background-color: #f2f2f2;
-            padding: 15px;
-            margin: 15px auto;
-            border-radius: 12px;
-            width: 80%;
-            transition: transform 0.3s ease;
-            animation: fadeUp 1.2s ease;
-        }
-
-        .skill-box:hover {
+        .main-button:hover {
+            background: #ff2020;
             transform: scale(1.05);
         }
 
-        .progress-container {
-            background-color: #ddd;
-            width: 100%;
-            height: 15px;
-            border-radius: 10px;
-            overflow: hidden;
+        /* Sections */
+
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
         }
 
-        .progress-html {
-            background-color: #ff7043;
-            width: 80%;
-            height: 15px;
-            animation: progressHTML 2s ease;
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #ff3333;
         }
 
-        .progress-css {
-            background-color: #42a5f5;
-            width: 65%;
-            height: 15px;
-            animation: progressCSS 2s ease;
+        /* Stories */
+
+        .stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
         }
 
-        .progress-js {
-            background-color: #fdd835;
-            width: 40%;
-            height: 15px;
-            animation: progressJS 2s ease;
+        .story-card {
+            background: #151515;
+            border: 1px solid #292929;
+            border-radius: 18px;
+            padding: 25px;
+            transition: 0.3s;
+            animation: fadeUp 1s ease;
         }
 
-        .message {
-            font-weight: bold;
-            color: blue;
-            animation: fadeUp 0.5s ease;
+        .story-card:hover {
+            transform: translateY(-8px);
+            border-color: #ff3333;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.15);
+        }
+
+        .story-icon {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        .story-card h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .story-card p {
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .read-button {
+            display: inline-block;
+            background: #222;
+            color: #ff4444;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .read-button:hover {
+            background: #ff3333;
+            color: white;
+        }
+
+        /* About */
+
+        .about {
+            background: #101010;
+            border-radius: 20px;
+            text-align: center;
+            padding: 40px 25px;
+        }
+
+        .about p {
+            color: #bbb;
+            max-width: 750px;
+            margin: auto;
+            font-size: 18px;
         }
 
         /* Contact */
 
         .contact {
-            margin-top: 30px;
+            text-align: center;
         }
 
         .contact a {
-            display: block;
+            color: #ff4444;
             text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            margin: 12px;
-            transition: transform 0.3s ease;
+            margin: 10px;
+            display: inline-block;
         }
 
-        .contact a:hover {
-            color: blue;
-            transform: scale(1.05);
-        }
+        /* Footer */
 
         footer {
-            margin-top: 40px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 15px;
-            font-size: 16px;
-            animation: fadeUp 1.5s ease;
+            background: #050505;
+            border-top: 1px solid #222;
+            text-align: center;
+            padding: 30px 15px;
+            color: #888;
         }
 
-        footer p {
-            margin: 5px;
+        footer strong {
+            color: #ff3333;
         }
 
-        /* Dark Mode */
-
-        .dark-mode {
-            background-color: #121212;
-            color: white;
-        }
-
-        .dark-mode .card {
-            background-color: #1e1e1e;
-        }
-
-        .dark-mode footer {
-            background-color: #1e1e1e;
-        }
-
-        .dark-mode p {
-            color: white;
-        }
-
-        .dark-mode nav a {
-            color: white;
-        }
-
-        .dark-mode .skill-box {
-            background-color: #2a2a2a;
-        }
-
-        .dark-mode .message {
-            color: #4da6ff;
-        }
-
-        .dark-mode button {
-            color: white;
-        }
-
-        .dark-mode .contact a {
-            color: white;
-        }
-
-        .dark-button {
-            background-color: #222;
-            color: white;
-        }
-
-        /* Animations */
+        /* Animation */
 
         @keyframes fadeUp {
             from {
@@ -236,70 +246,24 @@
             }
         }
 
-        @keyframes fadeDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes profileAnimation {
-            0% {
-                transform: scale(0.5);
-                opacity: 0;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        @keyframes progressHTML {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 80%;
-            }
-        }
-
-        @keyframes progressCSS {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 65%;
-            }
-        }
-
-        @keyframes progressJS {
-            from {
-                width: 0;
-            }
-
-            to {
-                width: 40%;
-            }
-        }
-
-        /* Responsive Design */
+        /* Mobile */
 
         @media (max-width: 600px) {
 
-            body {
-                padding-top: 25px;
+            .hero {
+                min-height: 65vh;
             }
 
-            nav {
-                margin-bottom: 20px;
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            .hero p {
+                font-size: 16px;
             }
 
             nav a {
@@ -307,163 +271,232 @@
                 font-size: 14px;
             }
 
-            .card {
-                width: 92%;
-                padding: 20px;
+            section {
+                padding: 50px 15px;
             }
 
-            .profile {
-                width: 100px;
-                height: 100px;
-            }
-
-            h1 {
-                font-size: 28px;
-            }
-
-            h2 {
-                font-size: 23px;
-            }
-
-            h3 {
-                font-size: 18px;
-            }
-
-            p {
-                font-size: 16px;
-            }
-
-            button {
-                padding: 10px 15px;
-                font-size: 14px;
-            }
-
-            .skill-box {
-                width: 95%;
-            }
-
-            footer {
-                margin-top: 25px;
-                padding: 15px;
+            .section-title {
+                font-size: 27px;
             }
         }
+
     </style>
+
 </head>
 
 <body>
 
+    <!-- Navigation -->
+
     <nav>
-        <a href="#">Home</a>
-        <a href="#about">About Me</a>
-        <a href="#goals">My Goals</a>
-        <a href="#skills">My Skills</a>
-        <a href="#contact">Contact</a>
+
+        <div class="logo">
+            👻 غريب الروح
+        </div>
+
+        <a href="#home">الرئيسية</a>
+        <a href="#stories">القصص</a>
+        <a href="#about">عن الموقع</a>
+        <a href="#contact">تواصل معنا</a>
+
     </nav>
 
-    <button class="dark-button" onclick="toggleDarkMode()">
-        🌙 Dark Mode
-    </button>
 
-    <div class="card">
+    <!-- Hero -->
 
-        <img class="profile" src="https://i.pravatar.cc/150?img=12" alt="Mohamed">
+    <header class="hero" id="home">
 
-        <h1>Hello Mohamed 👋</h1>
+        <div class="hero-content">
 
-        <h3>Beginner Web Developer 💻</h3>
+            <h1>👻 غريب الروح</h1>
 
-        <p>Welcome to my first website!</p>
+            <h2>
+                حيث تبدأ الحكاية... وينتهي الأمان.
+            </h2>
 
-        <h2 id="about">About Me 👨‍💻</h2>
+            <p>
+                مرحباً بك في عالم من القصص الغريبة،
+                الأحداث المرعبة والأسرار التي لا تجد لها تفسيراً.
+            </p>
 
-        <p>
-            My name is Mohamed. I am learning programming
-            and building my first website.
-        </p>
-
-        <h3 id="goals">My Goals 🎯</h3>
-
-        <p>
-            I want to improve my skills and become a good developer.
-        </p>
-
-        <div class="skills" id="skills">
-
-            <h3>My Skills 💻</h3>
-
-            <div class="skill-box">
-                <p>🌐 HTML - 80%</p>
-
-                <div class="progress-container">
-                    <div class="progress-html"></div>
-                </div>
-            </div>
-
-            <div class="skill-box">
-                <p>🎨 CSS - 65%</p>
-
-                <div class="progress-container">
-                    <div class="progress-css"></div>
-                </div>
-            </div>
-
-            <div class="skill-box">
-                <p>⚡ JavaScript - 40%</p>
-
-                <div class="progress-container">
-                    <div class="progress-js"></div>
-                </div>
-            </div>
+            <a href="#stories" class="main-button">
+                📖 اكتشف القصص
+            </a>
 
         </div>
 
-        <div class="contact" id="contact">
+    </header>
 
-            <h3>Contact Me 📞</h3>
+
+    <!-- Stories -->
+
+    <section id="stories">
+
+        <h2 class="section-title">
+            📚 أحدث القصص
+        </h2>
+
+        <div class="stories">
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    🌑
+                </div>
+
+                <h3>
+                    القصة الأولى
+                </h3>
+
+                <p>
+                    قصة غامضة بدأت في منتصف الليل...
+                    ولم يكن أحد يتوقع ما سيحدث بعدها.
+                </p>
+
+                <a href="#" class="read-button">
+                    اقرأ القصة →
+                </a>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    👁️
+                </div>
+
+                <h3>
+                    الشخص الذي لا ينام
+                </h3>
+
+                <p>
+                    كل ليلة كان يسمع نفس الصوت...
+                    لكن عندما فتح الباب لم يجد أحداً.
+                </p>
+
+                <a href="#" class="read-button">
+                    اقرأ القصة →
+                </a>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    🏚️
+                </div>
+
+                <h3>
+                    المنزل المهجور
+                </h3>
+
+                <p>
+                    منزل قديم في نهاية القرية...
+                    الجميع يخاف الاقتراب منه.
+                </p>
+
+                <a href="#" class="read-button">
+                    اقرأ القصة →
+                </a>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-icon">
+                    📞
+                </div>
+
+                <h3>
+                    المكالمة الأخيرة
+                </h3>
+
+                <p>
+                    تلقى مكالمة من رقم مجهول...
+                    والمفاجأة أن المتصل كان ميتاً.
+                </p>
+
+                <a href="#" class="read-button">
+                    اقرأ القصة →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+
+    <section id="about">
+
+        <div class="about">
+
+            <h2 class="section-title">
+                👤 عن غريب الروح
+            </h2>
+
+            <p>
+                غريب الروح هو عالم لمحبي القصص الغامضة
+                والرعب والتشويق.
+                هنا ستجد حكايات تأخذك إلى أماكن
+                لن ترغب في زيارتها وحدك.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+
+    <section id="contact">
+
+        <div class="contact">
+
+            <h2 class="section-title">
+                📩 تواصل معنا
+            </h2>
+
+            <p>
+                عندك قصة أو فكرة؟ تواصل معنا 👇
+            </p>
 
             <a href="mailto:Mohamedhakkouri@gmail.com">
-                📧 Mohamedhakkouri@gmail.com
+                📧 البريد الإلكتروني
             </a>
 
-            <a href="https://www.instagram.com/talesofphantasma/" target="_blank">
-                📷 Instagram - @talesofphantasma
+            <a href="https://www.instagram.com/talesofphantasma/"
+               target="_blank">
+                📷 Instagram
             </a>
 
         </div>
 
-        <button onclick="clickMe()">Click Me</button>
+    </section>
 
-        <a href="https://www.google.com">Visit Google</a>
 
-        <button onclick="showMessage()">About Me</button>
-
-        <p id="message" class="message"></p>
-
-    </div>
+    <!-- Footer -->
 
     <footer>
-        <p>© 2026 Mohamed</p>
-        <p>Beginner Web Developer 💻</p>
-        <p>Made with ❤️ and code</p>
+
+        <p>
+            © 2026 <strong>غريب الروح</strong>
+        </p>
+
+        <p>
+            جميع الحقوق محفوظة ❤️
+        </p>
+
     </footer>
 
-    <script>
-
-        function clickMe() {
-            document.getElementById("message").innerText =
-            "Hello Mohamed! 👋 You clicked the button!";
-        }
-
-        function showMessage() {
-            document.getElementById("message").innerText =
-            "Hello! My name is Mohamed. Welcome to my website!";
-        }
-
-        function toggleDarkMode() {
-            document.body.classList.toggle("dark-mode");
-        }
-
-    </script>
 
 </body>
+
 </html>
